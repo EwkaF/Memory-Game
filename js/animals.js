@@ -1,0 +1,26 @@
+module.exports = [
+    {name:'alligator', src:'./img/animals/alligator.png', audio:'./audio/alligator.mp3'},
+    {name:'cat', src:'./img/animals/cat.png', audio:'./audio/cat.mp3'},
+    {name:'cheetah', src:'./img/animals/cheetah.png', audio:'./audio/cheetah.mp3'},
+    {name:'chicken', src:'./img/animals/chicken.png', audio:'./audio/chicken.mp3'},
+    {name:'cow', src:'./img/animals/cow.png', audio:'./audio/cow.mp3'},
+    {name:'dog', src:'./img/animals/dog.png', audio:'./audio/dog.mp3'},
+    {name:'donkey', src:'./img/animals/donkey.png', audio:'./audio/donkey.mp3'},
+    {name:'duck', src:'./img/animals/duck.png', audio:'./audio/duck.mp3'},
+    {name:'elephant', src:'./img/animals/elephant.png', audio:'./audio/elephant.mp3'},
+    {name:'giraffe', src:'./img/animals/giraffe.png', audio:'./audio/giraffe.mp3'},
+    {name:'goat', src:'./img/animals/goat.png', audio:'./audio/goat.mp3'},
+    {name:'goose', src:'./img/animals/goose.png', audio:'./audio/goose.mp3'},
+    {name:'horse', src:'./img/animals/horse.png', audio:'./audio/horse.mp3'},
+    {name:'lion', src:'./img/animals/lion.png', audio:'./audio/lion.mp3'},
+    {name:'monkey', src:'./img/animals/monkey.png', audio:'./audio/monkey.mp3'},
+    {name:'panda', src:'./img/animals/panda.png', audio:'./audio/panda.mp3'},
+    {name:'penguin', src:'./img/animals/penguin.png', audio:'./audio/penguin.mp3'},
+    {name:'pig', src:'./img/animals/pig.png', audio:'./audio/pig.mp3'},
+    {name:'rabbit', src:'./img/animals/rabbit.png', audio:'./audio/rabbit.mp3'},
+    {name:'sheep', src:'./img/animals/sheep.png', audio:'./audio/sheep.mp3'},
+    {name:'tiger', src:'./img/animals/tiger.png', audio:'./audio/tiger.mp3'},
+    {name:'turkey', src:'./img/animals/turkey.png', audio:'./audio/turkey.mp3'},
+    {name:'zebra', src:'./img/animals/zebra.png', audio:'./audio/zebra.mp3'}
+
+]

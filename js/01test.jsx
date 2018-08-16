@@ -91,11 +91,9 @@ class Game extends React.Component{
         // const cards = this.props.cards.map(item =>
         //     <Card card={item} key={item.name}/>)
         return(
-            <div className='game'>
-            <h1>Wynik: {this.score}</h1>
-            <div style={{display:'flex',flexWrap: 'wrap', width: width, textAlign:'center'}}>
+
+            <div style={{display:'flex',flexWrap: 'wrap', width: width, justifyContent:'center', alignItems:'center', margin: '0 auto'}}>
                 {cards}
-            </div>
             </div>
         )
     }
@@ -103,9 +101,10 @@ class Game extends React.Component{
     handleCardOpen(cardIndex) {
 
         //funkcja play audio
-        this.sound = new Audio(this.props.cards[cardIndex].audio);
+        let id = this.state.gameGrid[cardIndex].imageId
+        this.sound = new Audio(this.props.cards[id].audio);
         // audio.src = this.props.cards.audio
-        console.log(key)
+        console.log(this.state.gameGrid[cardIndex].imageId)
         //console.log(this.props.cards[cardIndex].audio)
         this.sound.play()
         this.setState(prevState => ({

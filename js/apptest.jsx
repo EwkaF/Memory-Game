@@ -35,7 +35,10 @@ module.exports = class Card extends React.Component{
                 backgroundImage: "url(./img/spots.jpg)",
                 backgroundSize: 'contain',
                 backgroundRepeat:'no-repeat',
-                margin: '4px'
+                margin: '4px',
+                ':hover': {
+                    opacity:'0.5'
+                }
             }
             textStyle = {display:'none'}
         }
@@ -45,12 +48,12 @@ module.exports = class Card extends React.Component{
                 height: '160px',
                 border:'2px solid red',
                 backgroundImage: "url("+this.props.card.src +')',
-                // backgroundPosition: this.props.card.backgroundPosition,
                 backgroundSize: 'contain',
                 // width: this.props.card.width,
                 // height: this.props.card.height,
                 backgroundRepeat:'no-repeat',
                 margin: '4px'
+
             }
             textStyle ={
             position:'relative',

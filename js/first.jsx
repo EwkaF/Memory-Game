@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import body from './body.js';
 import fruits from './fruits.js';
+import animals from './animals.js'
 import Card from './apptest.jsx';
 import { GameController } from './01test.jsx';
 import style from '../style.scss';
@@ -28,11 +29,13 @@ class FirstPage extends React.Component{
   	handleOnClickBody = () => {
 		this.setState({selectedCards: body});
   	}
-  // 	handleOnClickAnimals = () => {
-		// this.setState({selectedCards: animals});
-  // 	}
+  	handleOnClickAnimals = () => {
+		this.setState({selectedCards: animals});
+  	}
 
-
+    componentDidMount() {
+        alert('Turn on the sound/ Włącz dźwięk');
+    }
 	render(){
 		const cardsSelector = <div>
 			<h2>Choose the theme / Wybierz tematykę</h2>
@@ -46,9 +49,11 @@ class FirstPage extends React.Component{
 
 		const display = this.state.selectedCards == null ? cardsSelector : game;	
 
-		return(<div className = 'container'>
+		return(<div className ='background' >
+			<div className = 'container'>
 			<h1 id = 'memoryGame'><span>Memory </span>GAME</h1>
 				{display}
+			</div>
 			</div>
 			);
 	}

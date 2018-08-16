@@ -9608,18 +9608,35 @@ module.exports = getHostComponentFromComposite;
 /***/ (function(module, exports) {
 
 module.exports = [
-    // {name:'anckle', src:'./img/partsOfBody/anckle.png', audio:'./audio/arm.mp3'},
     {name:'arm', src:'./img/partsOfBody/arm.png', audio:'./audio/arm.mp3'},
     {name:'back', src:'./img/partsOfBody/back.png', audio:'./audio/back.mp3'},
     {name:'cheek', src:'./img/partsOfBody/cheek.png', audio:'./audio/cheek.mp3'},
     {name:'chest', src:'./img/partsOfBody/chest.png', audio:'./audio/chest.mp3'},
     {name:'chin', src:'./img/partsOfBody/chin.png', audio:'./audio/chin.mp3'},
-    // {name:'ears', src:'./img/partsOfBody/ears.png', audio:'./audio/.mp3'},
+    {name:'ear', src:'./img/partsOfBody/ears.png', audio:'./audio/ear.mp3'},
     {name:'elbow', src:'./img/partsOfBody/elbow.png', audio:'./audio/elbow.mp3'},
     {name:'eyebrow', src:'./img/partsOfBody/eyebrow.png', audio:'./audio/eyebrow.mp3'},
     {name:'eyelash', src:'./img/partsOfBody/eyelash.png', audio:'./audio/eyelash.mp3'},
-    {name:'eyes', src:'./img/partsOfBody/eyes.png', audio:'./audio/eye.mp3'}
-    // {name:'fingernail', src:'./img/partsOfBody/fingernail.png'}
+    {name:'eye', src:'./img/partsOfBody/eyes.png', audio:'./audio/eye.mp3'},
+    {name:'fingernail', src:'./img/partsOfBody/fingernail.png', audio:'./audio/fingernail.mp3'},
+    {name:'finger', src:'./img/partsOfBody/fingers.png', audio:'./audio/finger.mp3'},
+    {name:'foot', src:'./img/partsOfBody/foot.png', audio:'./audio/foot.mp3'},
+    {name:'forehead', src:'./img/partsOfBody/forehead.png', audio:'./audio/forehead.mp3'},
+    {name:'hair', src:'./img/partsOfBody/hair.png', audio:'./audio/hair.mp3'},
+    {name:'hand', src:'./img/partsOfBody/hand.png', audio:'./audio/hand.mp3'},
+    {name:'head', src:'./img/partsOfBody/head.png', audio:'./audio/head.mp3'},
+    {name:'knee', src:'./img/partsOfBody/knee.png', audio:'./audio/knee.mp3'},
+    {name:'leg', src:'./img/partsOfBody/leg.png', audio:'./audio/leg.mp3'},
+    {name:'lips', src:'./img/partsOfBody/lips.png', audio:'./audio/lip.mp3'},
+    {name:'mouth', src:'./img/partsOfBody/mouth.png', audio:'./audio/mouth.mp3'},
+    {name:'neck', src:'./img/partsOfBody/neck.png', audio:'./audio/neck.mp3'},
+    {name:'nose', src:'./img/partsOfBody/nose.png', audio:'./audio/nose.mp3'},
+    {name:'shoulder', src:'./img/partsOfBody/shoulder.png', audio:'./audio/shoulder.mp3'},
+    {name:'stomach', src:'./img/partsOfBody/stomach.png', audio:'./audio/stomach.mp3'},
+    {name:'teeth', src:'./img/partsOfBody/teeth.png', audio:'./audio/teeth.mp3'},
+    {name:'toe', src:'./img/partsOfBody/toes.png', audio:'./audio/toe.mp3'},
+    {name:'tongue', src:'./img/partsOfBody/tongue.png', audio:'./audio/tongue.mp3'}
+
 ]
 
 
@@ -9634,17 +9651,30 @@ module.exports = [
 
 module.exports = [
     // {name:'anckle', src:'./img/partsOfBody/anckle.png', audio:'./audio/arm.mp3'},
-    {name:'apple', src:'./img/fruits&vegetables/apple.png'},
-    {name:'banana', src:'./img/fruits&vegetables/banana.png'},
-    {name:'blueberries', src:'./img/fruits&vegetables/blueberries.png'},
-    {name:'cabbage', src:'./img/fruits&vegetables/cabbage.png'},
-    {name:'cherries', src:'./img/fruits&vegetables/cherries.png'},
-    {name:'coconut', src:'./img/fruits&vegetables/coconut.png'},
-    {name:'corn', src:'./img/fruits&vegetables/corn.png'},
-    {name:'cranberies', src:'./img/fruits&vegetables/cranberies.png'},
-    {name:'grapes', src:'./img/fruits&vegetables/grapes.png'},
-    {name:'kiwi', src:'./img/fruits&vegetables/kiwi.png'},
-    // {name:'fingernail', src:'./img/partsOfBody/fingernail.png'}
+    {name:'apple', src:'./img/fruits&vegetables/apple.png', audio:'./audio/apple.mp3'},
+    {name:'banana', src:'./img/fruits&vegetables/banana.png', audio:'./audio/banana.mp3'},
+    {name:'cabbage', src:'./img/fruits&vegetables/cabbage.png', audio:'./audio/cabbage.mp3'},
+    {name:'carrot', src:'./img/fruits&vegetables/carrot.png', audio:'./audio/carrot.mp3'},
+    {name:'cherry', src:'./img/fruits&vegetables/cherries.png', audio:'./audio/cherry.mp3'},
+    {name:'coconut', src:'./img/fruits&vegetables/coconut.png', audio:'./audio/coconut.mp3'},
+    {name:'corn', src:'./img/fruits&vegetables/corn.png', audio:'./audio/corn.mp3'},
+    {name:'cranberry', src:'./img/fruits&vegetables/cranberies.png',audio:'./audio/cranberry.mp3'},
+    {name:'grapes', src:'./img/fruits&vegetables/grapes.png',audio:'./audio/grape.mp3'},
+    {name:'kiwi', src:'./img/fruits&vegetables/kiwi.png',audio:'./audio/kiwi.mp3'},
+    {name:'lemon', src:'./img/fruits&vegetables/lemon.png',audio:'./audio/lemon.mp3'},
+    {name:'onion', src:'./img/fruits&vegetables/onion.png',audio:'./audio/onion.mp3'},
+    {name:'orange', src:'./img/fruits&vegetables/orange.png',audio:'./audio/orange.mp3'},
+    {name:'peach', src:'./img/fruits&vegetables/peach.png',audio:'./audio/peach.mp3'},
+    {name:'pear', src:'./img/fruits&vegetables/pear.png',audio:'./audio/pear.mp3'},
+    {name:'pepper', src:'./img/fruits&vegetables/pepper.png',audio:'./audio/pepper.mp3'},
+    {name:'plum', src:'./img/fruits&vegetables/plum.png',audio:'./audio/plum.mp3'},
+    {name:'potato', src:'./img/fruits&vegetables/potato.png',audio:'./audio/potato.mp3'},
+    {name:'pumpkin', src:'./img/fruits&vegetables/pumpkin.png',audio:'./audio/pumpkin.mp3'},
+    {name:'raspberry', src:'./img/fruits&vegetables/raspberries.png',audio:'./audio/raspberry.mp3'},
+    {name:'strawberry', src:'./img/fruits&vegetables/strawberry.png',audio:'./audio/strawberry.mp3'},
+    {name:'tomato', src:'./img/fruits&vegetables/tomato.png',audio:'./audio/tomato.mp3'},
+    {name:'watermelon', src:'./img/fruits&vegetables/watermelon.png',audio:'./audio/watermelon.mp3'}
+
 ]
 
 /***/ }),
@@ -9712,7 +9742,10 @@ module.exports = function (_React$Component) {
                     backgroundImage: "url(./img/spots.jpg)",
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
-                    margin: '4px'
+                    margin: '4px',
+                    ':hover': {
+                        opacity: '0.5'
+                    }
                 };
                 textStyle = { display: 'none' };
             }
@@ -9722,12 +9755,12 @@ module.exports = function (_React$Component) {
                     height: '160px',
                     border: '2px solid red',
                     backgroundImage: "url(" + this.props.card.src + ')',
-                    // backgroundPosition: this.props.card.backgroundPosition,
                     backgroundSize: 'contain',
                     // width: this.props.card.width,
                     // height: this.props.card.height,
                     backgroundRepeat: 'no-repeat',
                     margin: '4px'
+
                 };
                 textStyle = {
                     position: 'relative',
@@ -9802,13 +9835,17 @@ var _fruits = __webpack_require__(84);
 
 var _fruits2 = _interopRequireDefault(_fruits);
 
+var _animals = __webpack_require__(187);
+
+var _animals2 = _interopRequireDefault(_animals);
+
 var _apptest = __webpack_require__(85);
 
 var _apptest2 = _interopRequireDefault(_apptest);
 
-var _test = __webpack_require__(187);
+var _test = __webpack_require__(188);
 
-var _style = __webpack_require__(188);
+var _style = __webpack_require__(189);
 
 var _style2 = _interopRequireDefault(_style);
 
@@ -9855,6 +9892,10 @@ var FirstPage = function (_React$Component2) {
 			_this2.setState({ selectedCards: _body2.default });
 		};
 
+		_this2.handleOnClickAnimals = function () {
+			_this2.setState({ selectedCards: _animals2.default });
+		};
+
 		_this2.state = {
 			selectedCards: null
 		};
@@ -9863,13 +9904,12 @@ var FirstPage = function (_React$Component2) {
 	}
 
 	_createClass(FirstPage, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			alert('Turn on the sound/ Włącz dźwięk');
+		}
+	}, {
 		key: 'render',
-
-		// 	handleOnClickAnimals = () => {
-		// this.setState({selectedCards: animals});
-		// 	}
-
-
 		value: function render() {
 			var cardsSelector = _react2.default.createElement(
 				'div',
@@ -9902,18 +9942,22 @@ var FirstPage = function (_React$Component2) {
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'container' },
+				{ className: 'background' },
 				_react2.default.createElement(
-					'h1',
-					{ id: 'memoryGame' },
+					'div',
+					{ className: 'container' },
 					_react2.default.createElement(
-						'span',
-						null,
-						'Memory '
+						'h1',
+						{ id: 'memoryGame' },
+						_react2.default.createElement(
+							'span',
+							null,
+							'Memory '
+						),
+						'GAME'
 					),
-					'GAME'
-				),
-				display
+					display
+				)
 			);
 		}
 	}]);
@@ -22485,6 +22529,37 @@ module.exports = ReactDOMInvalidARIAHook;
 
 /***/ }),
 /* 187 */
+/***/ (function(module, exports) {
+
+module.exports = [
+    {name:'alligator', src:'./img/animals/alligator.png', audio:'./audio/alligator.mp3'},
+    {name:'cat', src:'./img/animals/cat.png', audio:'./audio/cat.mp3'},
+    {name:'cheetah', src:'./img/animals/cheetah.png', audio:'./audio/cheetah.mp3'},
+    {name:'chicken', src:'./img/animals/chicken.png', audio:'./audio/chicken.mp3'},
+    {name:'cow', src:'./img/animals/cow.png', audio:'./audio/cow.mp3'},
+    {name:'dog', src:'./img/animals/dog.png', audio:'./audio/dog.mp3'},
+    {name:'donkey', src:'./img/animals/donkey.png', audio:'./audio/donkey.mp3'},
+    {name:'duck', src:'./img/animals/duck.png', audio:'./audio/duck.mp3'},
+    {name:'elephant', src:'./img/animals/elephant.png', audio:'./audio/elephant.mp3'},
+    {name:'giraffe', src:'./img/animals/giraffe.png', audio:'./audio/giraffe.mp3'},
+    {name:'goat', src:'./img/animals/goat.png', audio:'./audio/goat.mp3'},
+    {name:'goose', src:'./img/animals/goose.png', audio:'./audio/goose.mp3'},
+    {name:'horse', src:'./img/animals/horse.png', audio:'./audio/horse.mp3'},
+    {name:'lion', src:'./img/animals/lion.png', audio:'./audio/lion.mp3'},
+    {name:'monkey', src:'./img/animals/monkey.png', audio:'./audio/monkey.mp3'},
+    {name:'panda', src:'./img/animals/panda.png', audio:'./audio/panda.mp3'},
+    {name:'penguin', src:'./img/animals/penguin.png', audio:'./audio/penguin.mp3'},
+    {name:'pig', src:'./img/animals/pig.png', audio:'./audio/pig.mp3'},
+    {name:'rabbit', src:'./img/animals/rabbit.png', audio:'./audio/rabbit.mp3'},
+    {name:'sheep', src:'./img/animals/sheep.png', audio:'./audio/sheep.mp3'},
+    {name:'tiger', src:'./img/animals/tiger.png', audio:'./audio/tiger.mp3'},
+    {name:'turkey', src:'./img/animals/turkey.png', audio:'./audio/turkey.mp3'},
+    {name:'zebra', src:'./img/animals/zebra.png', audio:'./audio/zebra.mp3'}
+
+]
+
+/***/ }),
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22638,18 +22713,8 @@ var Game = function (_React$Component2) {
             //     <Card card={item} key={item.name}/>)
             return _react2.default.createElement(
                 'div',
-                { className: 'game' },
-                _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Wynik: ',
-                    this.score
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { style: { display: 'flex', flexWrap: 'wrap', width: width, textAlign: 'center' } },
-                    cards
-                )
+                { style: { display: 'flex', flexWrap: 'wrap', width: width, justifyContent: 'center', alignItems: 'center', margin: '0 auto' } },
+                cards
             );
         }
     }, {
@@ -22658,9 +22723,10 @@ var Game = function (_React$Component2) {
             var _this4 = this;
 
             //funkcja play audio
-            this.sound = new Audio(this.props.cards[cardIndex].audio);
+            var id = this.state.gameGrid[cardIndex].imageId;
+            this.sound = new Audio(this.props.cards[id].audio);
             // audio.src = this.props.cards.audio
-            console.log(key);
+            console.log(this.state.gameGrid[cardIndex].imageId);
             //console.log(this.props.cards[cardIndex].audio)
             this.sound.play();
             this.setState(function (prevState) {
@@ -22734,11 +22800,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(189);
+var content = __webpack_require__(190);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -22752,7 +22818,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(191)(content, options);
+var update = __webpack_require__(192)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -22784,21 +22850,21 @@ if(false) {
 }
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(190)(false);
+exports = module.exports = __webpack_require__(191)(false);
 // imports
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.container {\n  width: 100%;\n  max-width: 800px;\n  margin: 0 auto; }\n\n#memoryGame {\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 4em;\n  text-align: center;\n  color: red; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #00BFFF; }\n\nh2 {\n  text-align: center;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 10em;\n  margin: 0.5em; }\n  .button:hover {\n    opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.container {\n  width: 100%;\n  max-width: 1000px;\n  margin: 0 auto; }\n\n.background {\n  width: 100%;\n  height: 100vw; }\n\n#memoryGame {\n  margin-top: 1em;\n  margin-bottom: 1em;\n  font-size: 4em;\n  text-align: center;\n  color: #07C826; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\nh2 {\n  text-align: center;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 336px;\n  margin: 0.5em;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports) {
 
 /*
@@ -22880,7 +22946,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -22949,7 +23015,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(192);
+var	fixUrls = __webpack_require__(193);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -23284,7 +23350,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports) {
 
 
