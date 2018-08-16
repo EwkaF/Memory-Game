@@ -119,7 +119,7 @@ class Game extends React.Component{
                 console.log('Wygrana!');
                 this.score++
                 setTimeout(() => this.removeCards(this.state.checked), 1000);
-               
+
 
                 if (this.score === this.props.numberOfCardsinLevel){
                     console.log("jupi")
