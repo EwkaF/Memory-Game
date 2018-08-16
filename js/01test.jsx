@@ -118,12 +118,14 @@ class Game extends React.Component{
             if(this.state.gameGrid[this.state.checked[0]].imageId === this.state.gameGrid[this.state.checked[1]].imageId) {
                 console.log('Wygrana!');
                 this.score++
-                this.removeCards(this.state.checked);
-                console.log(this.props.numberOfCardsinLevel)
-                console.log(this.score)
+                setTimeout(() => this.removeCards(this.state.checked), 1000);
+               
+
                 if (this.score === this.props.numberOfCardsinLevel){
                     console.log("jupi")
-                    this.props.winALevel()
+                    setTimeout(() => this.props.winALevel(), 1000);
+
+
                 }
             
 

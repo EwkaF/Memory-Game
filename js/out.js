@@ -22741,12 +22741,15 @@ var Game = function (_React$Component2) {
                 if (_this4.state.gameGrid[_this4.state.checked[0]].imageId === _this4.state.gameGrid[_this4.state.checked[1]].imageId) {
                     console.log('Wygrana!');
                     _this4.score++;
-                    _this4.removeCards(_this4.state.checked);
-                    console.log(_this4.props.numberOfCardsinLevel);
-                    console.log(_this4.score);
+                    setTimeout(function () {
+                        return _this4.removeCards(_this4.state.checked);
+                    }, 1000);
+
                     if (_this4.score === _this4.props.numberOfCardsinLevel) {
                         console.log("jupi");
-                        _this4.props.winALevel();
+                        setTimeout(function () {
+                            return _this4.props.winALevel();
+                        }, 1000);
                     }
                 } else {
                     setTimeout(function () {
@@ -22858,7 +22861,7 @@ exports = module.exports = __webpack_require__(191)(false);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.container {\n  width: 100%;\n  max-width: 1000px;\n  margin: 0 auto; }\n\n.background {\n  width: 100%;\n  height: 100vw; }\n\n#memoryGame {\n  margin-top: 1em;\n  margin-bottom: 1em;\n  font-size: 4em;\n  text-align: center;\n  color: #07C826; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\nh2 {\n  text-align: center;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 336px;\n  margin: 0.5em;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto; }\n\n.container {\n  width: 100%;\n  max-width: 1000px;\n  margin: 0 auto; }\n\n#memoryGame {\n  padding-top: 1em;\n  margin-bottom: 1em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\nh2 {\n  text-align: center;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 7em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
 
 // exports
 

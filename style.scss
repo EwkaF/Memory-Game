@@ -2,32 +2,38 @@
     margin: 0;
     padding: 0;
 	font-family: 'Handlee', cursive;
-}
+	//background-color: burlywood;
 
-.container{
-	 width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 .background{
 	width: 100%;
-	height: 100vw;
-//	background-size: contain;
-//	background-image: url("img/blueshell.png");
+	height: 100vh;
+	//background-color: #F3FAB6;
+	margin: 0 auto;
+	//	background-size: contain;
+	//	background-image: url("img/blueshell.png");
 
 }
 
+.container{
+	width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
 #memoryGame{
-	margin-top: 1em;
+	padding-top: 1em;
 	margin-bottom: 1em;
 	font-size: 4em;
 	text-align:center;
-	color: #07C826;
+	//color: #07C826;
+	color:#005A31;
 	span{
 	font-family: 'Dancing Script', cursive;
 	font-style: italic;
 		//color: #00BFFF;
-		color: #F8B712
+		color: #F8B712;
 	}
 }
 
@@ -39,8 +45,13 @@ h2{
 .button{
 	//background: url("img/fruits&vegetables/apple.png") no-repeat scroll 0 0 transparent;
 	width: 30%;
-	height: 336px;
+	height: 7em;
 	margin: 0.5em;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: #CBE32D;
+
 	&:hover{
 		opacity: 0.5;
 	}
