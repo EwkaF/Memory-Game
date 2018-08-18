@@ -9713,16 +9713,6 @@ module.exports = function (_React$Component) {
 
     _createClass(Card, [{
         key: 'render',
-
-
-        // const divStyle ={};
-        //
-        //    handleMouseEnter = () => {
-        //        divStyle={
-        //            opacity:'0.5'
-        //        }
-        //    }
-
         value: function render() {
             var divStyle = {};
             var textStyle = {};
@@ -9776,10 +9766,10 @@ module.exports = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { onClick: this.props.onOpen, onMouseEnter: this.handleMouseEnter },
+                { onClick: this.props.onOpen },
                 _react2.default.createElement(
                     'div',
-                    { style: divStyle },
+                    { style: divStyle, className: 'card' },
                     _react2.default.createElement(
                         'h3',
                         { style: textStyle },
@@ -22725,8 +22715,7 @@ var Game = function (_React$Component2) {
             });
 
             var width = 170 * Math.sqrt(this.props.numberOfCardsinLevel * 2);
-            // const cards = this.props.cards.map(item =>
-            //     <Card card={item} key={item.name}/>)
+
             return _react2.default.createElement(
                 'div',
                 { style: { display: 'flex', flexWrap: 'wrap', width: width, justifyContent: 'center', alignItems: 'center', margin: '1em auto' } },
@@ -22741,16 +22730,15 @@ var Game = function (_React$Component2) {
             //funkcja play audio
             var id = this.state.gameGrid[cardIndex].imageId;
             this.sound = new Audio(this.props.cards[id].audio);
-            console.log(this.state.gameGrid[cardIndex].imageId);
-
             this.sound.play();
+
             this.setState(function (prevState) {
                 return {
                     checked: prevState.checked.indexOf(cardIndex) > -1 ? prevState.checked : [].concat(_toConsumableArray(prevState.checked), [cardIndex])
                 };
             }, function () {
 
-                console.log('checked', _this4.state.checked);
+                // console.log('checked', this.state.checked);
                 if (_this4.state.checked.length < 2) return;
 
                 if (_this4.state.gameGrid[_this4.state.checked[0]].imageId === _this4.state.gameGrid[_this4.state.checked[1]].imageId) {
@@ -22761,7 +22749,6 @@ var Game = function (_React$Component2) {
                     }, 1000);
 
                     if (_this4.score === _this4.props.numberOfCardsinLevel) {
-                        console.log("jupi");
 
                         setTimeout(function () {
                             return _this4.props.winALevel();
@@ -22772,7 +22759,7 @@ var Game = function (_React$Component2) {
                         return _this4.setState({ checked: [] });
                     }, 1000);
 
-                    console.log('Przegrana');
+                    // console.log('Przegrana');
                 }
             });
         }
@@ -22799,7 +22786,7 @@ var Game = function (_React$Component2) {
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps) {
-            console.log("componentDidUpdate", prevProps, this.props);
+            // console.log("componentDidUpdate", prevProps, this.props)
 
             if (prevProps.numberOfCardsinLevel != this.props.numberOfCardsinLevel) {
                 this.initialiseGame();
@@ -22878,7 +22865,7 @@ exports = module.exports = __webpack_require__(192)(false);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(193)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 2em; }\n\n.showButtons {\n  margin-top: 8em;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 3px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n  .button p {\n    padding-top: 20px;\n    margin: 0 auto; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(194)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#body {\n  background-image: url(" + escape(__webpack_require__(195)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#animals {\n  background-image: url(" + escape(__webpack_require__(196)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(193)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 2em; }\n\n.showButtons {\n  margin-top: 8em;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 3px solid darkgreen;\n  border-radius: 5%; }\n  .button:hover {\n    opacity: 0.5; }\n  .button p {\n    padding-top: 1.5em;\n    margin: 0 auto; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(194)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 5% 5% 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#body {\n  background-image: url(" + escape(__webpack_require__(195)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 5% 5% 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#animals {\n  background-image: url(" + escape(__webpack_require__(196)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 5% 5% 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n.game {\n  text-align: center; }\n\n.card:hover {\n  opacity: 0.5; }\n", ""]);
 
 // exports
 

@@ -2,18 +2,15 @@
     margin: 0;
     padding: 0;
 	font-family: 'Handlee', cursive;
-	//background-color: burlywood;
-
 }
+
 .background{
 	width: 100%;
 	height: 100vh;
-	//background-color: #F3FAB6;
 	margin: 0 auto;
 	background-size: contain;
 	background-image: url("img/jungle.jpg");
 	background-attachment: fixed;
-
 }
 
 .container{
@@ -30,23 +27,20 @@
 	margin-bottom: 0.0em;
 	font-size: 4em;
 	text-align:center;
-	//color: #07C826;
 	color:#005A31;
 	span{
-	font-family: 'Dancing Script', cursive;
-	font-style: italic;
-		//color: #00BFFF;
+		font-family: 'Dancing Script', cursive;
+		font-style: italic;
 		color: #F8B712;
 	}
 }
 
 .red-bell {
-	width:80px;
-	height:20px;
+	//width:80px;
+	//height:20px;
 	background-color: transparent;
 	animation: pulsowanie 4s 1 alternate;
 	animation-fill-mode: forwards;
-	/* transform: skew(-15deg, 190deg); */
 	transform: translate(540px, 0px) rotate(173deg);
 	border: solid 8px red;
 	border-color:transparent red red transparent;
@@ -61,18 +55,21 @@
 	100% {width:230px;
 		height:10px;}
 }
+
 h2{
 	text-align:center;
 	margin-top: 2em;
 	margin-bottom: 1em;
 	font-size: 2em;
 }
+
 .showButtons{
 	margin-top: 8em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .button{
 	width: 30%;
 	height: 20em;
@@ -81,29 +78,27 @@ h2{
 	font-weight: bold;
 	font-size: 1em;
 	background-color: #CBE32D;
-
 	&:hover{
 		opacity: 0.5;
 	}
 	border: 3px solid darkgreen;
-	border-radius: 15px;
+	border-radius: 5%;
 	p{
-		padding-top: 20px;
+		padding-top: 1.5em;
 		margin: 0 auto;
 	}
-
-
 }
+
 @mixin img{
 	background-position:center;
 	background-color: white;
 	background-size: contain;
-	border-radius: 15px 15px 0 0;
-	//opacity: 0.5;
+	border-radius: 5% 5% 0 0;
 	background-repeat: no-repeat;
 	height:75%;
 	width: 100%;
 }
+
 #fruits{
 	background-image: url("img/fruits&vegetables/apple.png");
 	@include img;
@@ -122,6 +117,8 @@ h2{
 	text-align: center;
 }
 
-.box{
-
+.card{
+	&:hover{
+	opacity: 0.5;
+	}
 }

@@ -63,8 +63,6 @@ class Game extends React.Component{
                 }
             }
 
-        
-
         //podwojenie kart
         const gameGrid = [...randomNumbers,...randomNumbers].map(id => ({ imageId: id, isRemoved: false}))
         console.log(gameGrid);
@@ -89,13 +87,12 @@ class Game extends React.Component{
             onOpen={() => this.handleCardOpen(index)} />)
    
         let width = 170 * Math.sqrt(this.props.numberOfCardsinLevel*2)
-        // const cards = this.props.cards.map(item =>
-        //     <Card card={item} key={item.name}/>)
+
         return(
 
             <div style={{display:'flex',flexWrap: 'wrap', width: width, justifyContent:'center', alignItems:'center', margin: '1em auto'}}>
                 {cards}
-           
+
             </div>
         )
     }
@@ -105,14 +102,13 @@ class Game extends React.Component{
         //funkcja play audio
         let id = this.state.gameGrid[cardIndex].imageId
         this.sound = new Audio(this.props.cards[id].audio);
-        console.log(this.state.gameGrid[cardIndex].imageId)
+        this.sound.play();
 
-        this.sound.play()
         this.setState(prevState => ({
             checked: prevState.checked.indexOf(cardIndex) > -1 ? prevState.checked : [...prevState.checked, cardIndex]
         }), () => {
 
-            console.log('checked', this.state.checked);
+            // console.log('checked', this.state.checked);
             if(this.state.checked.length < 2)
                 return;
 
@@ -123,11 +119,8 @@ class Game extends React.Component{
 
 
                 if (this.score === this.props.numberOfCardsinLevel){
-                    console.log("jupi");
 
                     setTimeout(() => this.props.winALevel(), 1000);
-
-
 
                 }
             
@@ -135,7 +128,7 @@ class Game extends React.Component{
             } else {
                 setTimeout(() => this.setState({ checked: [] }), 1000);
                 
-                console.log('Przegrana');
+                // console.log('Przegrana');
             }
         });
             }
@@ -157,7 +150,7 @@ class Game extends React.Component{
     }
 
     componentDidUpdate(prevProps){
-        console.log("componentDidUpdate", prevProps, this.props)
+        // console.log("componentDidUpdate", prevProps, this.props)
 
         if(prevProps.numberOfCardsinLevel != this.props.numberOfCardsinLevel) {
             this.initialiseGame();

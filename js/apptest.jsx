@@ -3,19 +3,10 @@ import ReactDOM from 'react-dom';
 
 module.exports = class Card extends React.Component{
 
- // const divStyle ={};
- //
- //    handleMouseEnter = () => {
- //        divStyle={
- //            opacity:'0.5'
- //        }
- //    }
 
     render(){
         let divStyle ={};
         let textStyle ={};
-        
-    
 
         if (!this.props.isOpen){
             divStyle ={
@@ -66,8 +57,8 @@ module.exports = class Card extends React.Component{
 
 
 
-        return (<div onClick={this.props.onOpen} onMouseEnter={this.handleMouseEnter} >
-            <div style={divStyle}>
+        return (<div onClick={this.props.onOpen} >
+            <div style={divStyle} className="card">
 
             <h3 style={textStyle}>{this.props.card.name} </h3>
             </div>
