@@ -14,7 +14,8 @@ module.exports = class Card extends React.Component{
             divStyle ={
                 width:'160px',
                 height: '160px',
-                border:'2px solid orange',
+                border:'4px solid orange',
+                borderRadius:'5%',
                 backgroundImage: "url(./img/spots.jpg)",
                 backgroundSize: 'contain',
                 backgroundRepeat:'no-repeat',
@@ -30,7 +31,8 @@ module.exports = class Card extends React.Component{
             divStyle ={
                 width:'160px',
                 height: '160px',
-                border:'2px solid red',
+                border:'4px solid red',
+                borderRadius:'5%',
                 backgroundImage: "url("+this.props.card.src +')',
                 backgroundSize: 'contain',
                 backgroundRepeat:'no-repeat',
@@ -54,7 +56,7 @@ module.exports = class Card extends React.Component{
         }
 
 
-        return (<div onClick={this.props.onOpen}>
+        return (<div onClick={this.props.onOpen} >
             <div style={divStyle}>
             {/*<audio>*/}
             {/*<source src = {this.props.card.audio}></source>*/}

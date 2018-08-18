@@ -9721,7 +9721,8 @@ module.exports = function (_React$Component) {
                 divStyle = {
                     width: '160px',
                     height: '160px',
-                    border: '2px solid orange',
+                    border: '4px solid orange',
+                    borderRadius: '5%',
                     backgroundImage: "url(./img/spots.jpg)",
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
@@ -9737,7 +9738,8 @@ module.exports = function (_React$Component) {
                 divStyle = {
                     width: '160px',
                     height: '160px',
-                    border: '2px solid red',
+                    border: '4px solid red',
+                    borderRadius: '5%',
                     backgroundImage: "url(" + this.props.card.src + ')',
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
@@ -9901,19 +9903,50 @@ var FirstPage = function (_React$Component2) {
 					'Choose the theme / Wybierz tematyk\u0119'
 				),
 				_react2.default.createElement(
-					'button',
-					{ className: 'button', id: 'fruits', onClick: this.handleOnClickFruits },
-					'Fruits & Vegetables / Owoce & warzywa'
-				),
-				_react2.default.createElement(
-					'button',
-					{ className: 'button', onClick: this.handleOnClickBody },
-					'Body parts / Cz\u0119\u015Bci cia\u0142a'
-				),
-				_react2.default.createElement(
-					'button',
-					{ className: 'button', onClick: this.handleOnClickAnimals },
-					'Animals / Zwierz\u0119ta'
+					'div',
+					{ className: 'showButtons' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'button' },
+						_react2.default.createElement(
+							'button',
+							{ id: 'fruits', onClick: this.handleOnClickFruits },
+							' '
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Fruits & Vegetables / Owoce & warzywa'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'button' },
+						_react2.default.createElement(
+							'button',
+							{ id: 'body', onClick: this.handleOnClickBody },
+							' '
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Body parts / Cz\u0119\u015Bci cia\u0142a'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'button' },
+						_react2.default.createElement(
+							'button',
+							{ id: 'animals', onClick: this.handleOnClickAnimals },
+							' '
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Animals / Zwierz\u0119ta'
+						)
+					)
 				)
 			);
 
@@ -22804,7 +22837,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(194)(content, options);
+var update = __webpack_require__(195)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -22845,7 +22878,7 @@ exports = module.exports = __webpack_require__(192)(false);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(197)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(198)) + ");\n  background-size: contain;\n  opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(193)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 2em; }\n\n.showButtons {\n  margin-top: 8em;\n  display: flex;\n  flex-wrap: wrap; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 3px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n  .button p {\n    padding-top: 20px;\n    margin: 0 auto; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(194)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#body {\n  background-image: url(" + escape(__webpack_require__(197)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#animals {\n  background-image: url(" + escape(__webpack_require__(198)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n.game {\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -22955,8 +22988,19 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 193 */,
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "24de45293340e906207e0c5cc0e1ce62.jpg";
+
+/***/ }),
 /* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1770fd366044cc5b47a0ed4f983e06fc.png";
+
+/***/ }),
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23025,7 +23069,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(195);
+var	fixUrls = __webpack_require__(196);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -23360,7 +23404,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports) {
 
 
@@ -23455,17 +23499,16 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 196 */,
 /* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "24de45293340e906207e0c5cc0e1ce62.jpg";
+module.exports = __webpack_require__.p + "08680ed28a64e2b90f5b459f285e9a21.png";
 
 /***/ }),
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1770fd366044cc5b47a0ed4f983e06fc.png";
+module.exports = __webpack_require__.p + "5c82ea3746fc5bad184001be65a9ebd6.png";
 
 /***/ })
 /******/ ]);

@@ -39,10 +39,24 @@ class FirstPage extends React.Component{
 	render(){
 		const cardsSelector = <div style={{textAlign:'center'}}>
 			<h2>Choose the theme / Wybierz tematykę</h2>
-			
-			<button className='button' id ="fruits" onClick={this.handleOnClickFruits}>Fruits & Vegetables / Owoce & warzywa</button>
-			<button className='button'onClick={this.handleOnClickBody}>Body parts / Części ciała</button>
-			<button className='button'onClick={this.handleOnClickAnimals}>Animals / Zwierzęta</button>
+			<div className="showButtons">
+
+				<div className='button'>
+					<button  id ="fruits" onClick={this.handleOnClickFruits}> </button>
+					<p>Fruits & Vegetables / Owoce & warzywa</p>
+				</div>
+
+				<div className="button">
+					<button id="body" onClick={this.handleOnClickBody}> </button>
+					<p>Body parts / Części ciała</p>
+				</div>
+
+            	<div className="button">
+					<button id="animals" onClick={this.handleOnClickAnimals}> </button>
+					<p>Animals / Zwierzęta</p>
+				</div>
+
+			</div>
 		</div>;
 
 		const game = <GameController cards={this.state.selectedCards} />

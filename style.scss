@@ -65,8 +65,13 @@ h2{
 	text-align:center;
 	margin-top: 2em;
 	margin-bottom: 1em;
+	font-size: 2em;
 }
-
+.showButtons{
+	margin-top: 8em;
+	display: flex;
+	flex-wrap: wrap;
+}
 .button{
 	width: 30%;
 	height: 20em;
@@ -79,16 +84,38 @@ h2{
 	&:hover{
 		opacity: 0.5;
 	}
-	border: 2px solid darkgreen;
+	border: 3px solid darkgreen;
 	border-radius: 15px;
+	p{
+		padding-top: 20px;
+		margin: 0 auto;
+	}
 
 
 }
-
+@mixin img{
+	background-position:center;
+	background-color: white;
+	background-size: contain;
+	border-radius: 15px 15px 0 0;
+	//opacity: 0.5;
+	background-repeat: no-repeat;
+	height:75%;
+	width: 100%;
+}
 #fruits{
 	background-image: url("img/fruits&vegetables/apple.png");
-	background-size: contain;
-	opacity: 0.5;
+	@include img;
+}
+
+#body{
+	background-image: url("img/partsOfBody/head.png");
+	@include img;
+}
+
+#animals{
+	background-image: url("img/animals/alligator.png");
+	@include img;
 }
 .game {
 	text-align: center;
