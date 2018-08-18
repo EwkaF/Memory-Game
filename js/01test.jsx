@@ -40,9 +40,10 @@ class Game extends React.Component{
         this.state = {
            checked : [],
            isMatched : false,
-           gameGrid: null,
+           gameGrid: null
         }
   }
+
 
   initialiseGame() {
             this.score = 0;
@@ -92,8 +93,11 @@ class Game extends React.Component{
         //     <Card card={item} key={item.name}/>)
         return(
 
-            <div style={{display:'flex',flexWrap: 'wrap', width: width, justifyContent:'center', alignItems:'center', margin: '0 auto'}}>
+            <div style={{display:'flex',flexWrap: 'wrap', width: width, justifyContent:'center', alignItems:'center', margin: '1em auto'}}>
                 {cards}
+
+                {/*pokazywanie next level*/}
+                {/*{this.score === this.props.numberOfCardsinLevel && <div>Next level</div>}*/}
             </div>
         )
     }
@@ -122,8 +126,10 @@ class Game extends React.Component{
 
 
                 if (this.score === this.props.numberOfCardsinLevel){
-                    console.log("jupi")
+                    console.log("jupi");
+
                     setTimeout(() => this.props.winALevel(), 1000);
+
 
 
                 }

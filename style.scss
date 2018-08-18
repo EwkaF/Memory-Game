@@ -10,21 +10,24 @@
 	height: 100vh;
 	//background-color: #F3FAB6;
 	margin: 0 auto;
-	//	background-size: contain;
-	//	background-image: url("img/blueshell.png");
+	background-size: contain;
+	background-image: url("img/jungle.jpg");
+	background-attachment: fixed;
 
 }
 
 .container{
 	width: 100%;
-    max-width: 1000px;
+	height: 100vh;
+    max-width: 1100px;
     margin: 0 auto;
+	background-color: white;
 }
 
 
 #memoryGame{
-	padding-top: 1em;
-	margin-bottom: 1em;
+	padding-top: 0.5em;
+	margin-bottom: 0.0em;
 	font-size: 4em;
 	text-align:center;
 	//color: #07C826;
@@ -37,15 +40,36 @@
 	}
 }
 
+.red-bell {
+	width:80px;
+	height:20px;
+	background-color: transparent;
+	animation: pulsowanie 4s 1 alternate;
+	animation-fill-mode: forwards;
+	/* transform: skew(-15deg, 190deg); */
+	transform: translate(540px, 0px) rotate(173deg);
+	border: solid 8px red;
+	border-color:transparent red red transparent;
+	border-radius:  0 50% 50% 50%;
+
+}
+
+@keyframes pulsowanie
+{
+	0% {width:80px;
+		height: 30px;}
+	100% {width:230px;
+		height:10px;}
+}
 h2{
 	text-align:center;
+	margin-top: 2em;
 	margin-bottom: 1em;
 }
 
 .button{
-	//background: url("img/fruits&vegetables/apple.png") no-repeat scroll 0 0 transparent;
 	width: 30%;
-	height: 7em;
+	height: 20em;
 	margin: 0.5em;
 	cursor: pointer;
 	font-weight: bold;
@@ -61,6 +85,11 @@ h2{
 
 }
 
+#fruits{
+	background-image: url("img/fruits&vegetables/apple.png");
+	background-size: contain;
+	opacity: 0.5;
+}
 .game {
 	text-align: center;
 }

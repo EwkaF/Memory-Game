@@ -2,32 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 module.exports = class Card extends React.Component{
-    constructor(props){
-        super(props);
-        this.state ={
-            isOff: false,
-            isChecked: true,
-            isMatched: this.props.isMatched
-        }
-
-    }
 
 
-    componentWillReceiveProps(nextProps) {
-    if (nextProps.isMatched == true) {
-      this.setState({
-        isMatched: true
-      });
-    }
-  }
-  
     render(){
         let divStyle ={};
         let textStyle ={};
         
     
 
-        if (!this.state.isOpen){
+        if (!this.props.isOpen){
             divStyle ={
                 width:'160px',
                 height: '160px',
@@ -36,9 +19,10 @@ module.exports = class Card extends React.Component{
                 backgroundSize: 'contain',
                 backgroundRepeat:'no-repeat',
                 margin: '4px',
-                ':hover': {
+                '&:hover': {
                     opacity:'0.5'
-                }
+                },
+                cursor:'pointer'
             }
             textStyle = {display:'none'}
         }
@@ -49,8 +33,6 @@ module.exports = class Card extends React.Component{
                 border:'2px solid red',
                 backgroundImage: "url("+this.props.card.src +')',
                 backgroundSize: 'contain',
-                // width: this.props.card.width,
-                // height: this.props.card.height,
                 backgroundRepeat:'no-repeat',
                 margin: '4px'
 
@@ -65,7 +47,6 @@ module.exports = class Card extends React.Component{
             divStyle ={
                 width:'160px',
                 height: '160px',
-                // border:'2px solid blue',
                 backgroundColor: 'white',
                 margin: '4px'
             }

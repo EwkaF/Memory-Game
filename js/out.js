@@ -9705,36 +9705,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 module.exports = function (_React$Component) {
     _inherits(Card, _React$Component);
 
-    function Card(props) {
+    function Card() {
         _classCallCheck(this, Card);
 
-        var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-
-        _this.state = {
-            isOff: false,
-            isChecked: true,
-            isMatched: _this.props.isMatched
-        };
-
-        return _this;
+        return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).apply(this, arguments));
     }
 
     _createClass(Card, [{
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            if (nextProps.isMatched == true) {
-                this.setState({
-                    isMatched: true
-                });
-            }
-        }
-    }, {
         key: 'render',
         value: function render() {
             var divStyle = {};
             var textStyle = {};
 
-            if (!this.state.isOpen) {
+            if (!this.props.isOpen) {
                 divStyle = {
                     width: '160px',
                     height: '160px',
@@ -9743,9 +9726,10 @@ module.exports = function (_React$Component) {
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
                     margin: '4px',
-                    ':hover': {
+                    '&:hover': {
                         opacity: '0.5'
-                    }
+                    },
+                    cursor: 'pointer'
                 };
                 textStyle = { display: 'none' };
             }
@@ -9756,8 +9740,6 @@ module.exports = function (_React$Component) {
                     border: '2px solid red',
                     backgroundImage: "url(" + this.props.card.src + ')',
                     backgroundSize: 'contain',
-                    // width: this.props.card.width,
-                    // height: this.props.card.height,
                     backgroundRepeat: 'no-repeat',
                     margin: '4px'
 
@@ -9772,7 +9754,6 @@ module.exports = function (_React$Component) {
                 divStyle = {
                     width: '160px',
                     height: '160px',
-                    // border:'2px solid blue',
                     backgroundColor: 'white',
                     margin: '4px'
                 };
@@ -9913,7 +9894,7 @@ var FirstPage = function (_React$Component2) {
 		value: function render() {
 			var cardsSelector = _react2.default.createElement(
 				'div',
-				null,
+				{ style: { textAlign: 'center' } },
 				_react2.default.createElement(
 					'h2',
 					null,
@@ -9921,7 +9902,7 @@ var FirstPage = function (_React$Component2) {
 				),
 				_react2.default.createElement(
 					'button',
-					{ className: 'button', onClick: this.handleOnClickFruits },
+					{ className: 'button', id: 'fruits', onClick: this.handleOnClickFruits },
 					'Fruits & Vegetables / Owoce & warzywa'
 				),
 				_react2.default.createElement(
@@ -9956,6 +9937,7 @@ var FirstPage = function (_React$Component2) {
 						),
 						'GAME'
 					),
+					_react2.default.createElement('div', { className: 'red-bell' }),
 					display
 				)
 			);
@@ -22713,7 +22695,7 @@ var Game = function (_React$Component2) {
             //     <Card card={item} key={item.name}/>)
             return _react2.default.createElement(
                 'div',
-                { style: { display: 'flex', flexWrap: 'wrap', width: width, justifyContent: 'center', alignItems: 'center', margin: '0 auto' } },
+                { style: { display: 'flex', flexWrap: 'wrap', width: width, justifyContent: 'center', alignItems: 'center', margin: '1em auto' } },
                 cards
             );
         }
@@ -22747,6 +22729,7 @@ var Game = function (_React$Component2) {
 
                     if (_this4.score === _this4.props.numberOfCardsinLevel) {
                         console.log("jupi");
+
                         setTimeout(function () {
                             return _this4.props.winALevel();
                         }, 1000);
@@ -22821,7 +22804,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(192)(content, options);
+var update = __webpack_require__(194)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -22856,18 +22839,41 @@ if(false) {
 /* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(191)(false);
+var escape = __webpack_require__(191);
+exports = module.exports = __webpack_require__(192)(false);
 // imports
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto; }\n\n.container {\n  width: 100%;\n  max-width: 1000px;\n  margin: 0 auto; }\n\n#memoryGame {\n  padding-top: 1em;\n  margin-bottom: 1em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\nh2 {\n  text-align: center;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 7em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(197)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 2px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(198)) + ");\n  background-size: contain;\n  opacity: 0.5; }\n\n.game {\n  text-align: center; }\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 191 */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
+}
+
+
+/***/ }),
+/* 192 */
 /***/ (function(module, exports) {
 
 /*
@@ -22949,7 +22955,8 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 192 */
+/* 193 */,
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -23018,7 +23025,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(193);
+var	fixUrls = __webpack_require__(195);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -23353,7 +23360,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports) {
 
 
@@ -23446,6 +23453,19 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 196 */,
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "24de45293340e906207e0c5cc0e1ce62.jpg";
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1770fd366044cc5b47a0ed4f983e06fc.png";
 
 /***/ })
 /******/ ]);
