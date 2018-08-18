@@ -9713,6 +9713,16 @@ module.exports = function (_React$Component) {
 
     _createClass(Card, [{
         key: 'render',
+
+
+        // const divStyle ={};
+        //
+        //    handleMouseEnter = () => {
+        //        divStyle={
+        //            opacity:'0.5'
+        //        }
+        //    }
+
         value: function render() {
             var divStyle = {};
             var textStyle = {};
@@ -9749,7 +9759,9 @@ module.exports = function (_React$Component) {
                 textStyle = {
                     position: 'relative',
                     top: '120px',
-                    left: '40px'
+                    left: '40px',
+                    fontWeight: 'bold',
+                    fontSize: '1.5em'
                 };
             }
             if (this.props.isRemoved) {
@@ -9764,7 +9776,7 @@ module.exports = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { onClick: this.props.onOpen },
+                { onClick: this.props.onOpen, onMouseEnter: this.handleMouseEnter },
                 _react2.default.createElement(
                     'div',
                     { style: divStyle },
@@ -9781,17 +9793,6 @@ module.exports = function (_React$Component) {
 
     return Card;
 }(_react2.default.Component);
-
-// const images =  {name:'blueshell',
-//      src:'./img/blueshell.png'};
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     ReactDOM.render(
-//         <Card blueshell = {images}/>,
-//         document.getElementById('app')
-//     );
-// });;
 
 /***/ }),
 /* 86 */
@@ -22740,9 +22741,8 @@ var Game = function (_React$Component2) {
             //funkcja play audio
             var id = this.state.gameGrid[cardIndex].imageId;
             this.sound = new Audio(this.props.cards[id].audio);
-            // audio.src = this.props.cards.audio
             console.log(this.state.gameGrid[cardIndex].imageId);
-            //console.log(this.props.cards[cardIndex].audio)
+
             this.sound.play();
             this.setState(function (prevState) {
                 return {
@@ -22837,7 +22837,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(195)(content, options);
+var update = __webpack_require__(197)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -22878,7 +22878,7 @@ exports = module.exports = __webpack_require__(192)(false);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(193)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 2em; }\n\n.showButtons {\n  margin-top: 8em;\n  display: flex;\n  flex-wrap: wrap; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 3px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n  .button p {\n    padding-top: 20px;\n    margin: 0 auto; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(194)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#body {\n  background-image: url(" + escape(__webpack_require__(197)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#animals {\n  background-image: url(" + escape(__webpack_require__(198)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n.game {\n  text-align: center; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Handlee', cursive; }\n\n.background {\n  width: 100%;\n  height: 100vh;\n  margin: 0 auto;\n  background-size: contain;\n  background-image: url(" + escape(__webpack_require__(193)) + ");\n  background-attachment: fixed; }\n\n.container {\n  width: 100%;\n  height: 100vh;\n  max-width: 1100px;\n  margin: 0 auto;\n  background-color: white; }\n\n#memoryGame {\n  padding-top: 0.5em;\n  margin-bottom: 0.0em;\n  font-size: 4em;\n  text-align: center;\n  color: #005A31; }\n  #memoryGame span {\n    font-family: 'Dancing Script', cursive;\n    font-style: italic;\n    color: #F8B712; }\n\n.red-bell {\n  width: 80px;\n  height: 20px;\n  background-color: transparent;\n  animation: pulsowanie 4s 1 alternate;\n  animation-fill-mode: forwards;\n  /* transform: skew(-15deg, 190deg); */\n  transform: translate(540px, 0px) rotate(173deg);\n  border: solid 8px red;\n  border-color: transparent red red transparent;\n  border-radius: 0 50% 50% 50%; }\n\n@keyframes pulsowanie {\n  0% {\n    width: 80px;\n    height: 30px; }\n  100% {\n    width: 230px;\n    height: 10px; } }\n\nh2 {\n  text-align: center;\n  margin-top: 2em;\n  margin-bottom: 1em;\n  font-size: 2em; }\n\n.showButtons {\n  margin-top: 8em;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n\n.button {\n  width: 30%;\n  height: 20em;\n  margin: 0.5em;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1em;\n  background-color: #CBE32D;\n  border: 3px solid darkgreen;\n  border-radius: 15px; }\n  .button:hover {\n    opacity: 0.5; }\n  .button p {\n    padding-top: 20px;\n    margin: 0 auto; }\n\n#fruits {\n  background-image: url(" + escape(__webpack_require__(194)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#body {\n  background-image: url(" + escape(__webpack_require__(195)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n#animals {\n  background-image: url(" + escape(__webpack_require__(196)) + ");\n  background-position: center;\n  background-color: white;\n  background-size: contain;\n  border-radius: 15px 15px 0 0;\n  background-repeat: no-repeat;\n  height: 75%;\n  width: 100%; }\n\n.game {\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -23003,6 +23003,18 @@ module.exports = __webpack_require__.p + "1770fd366044cc5b47a0ed4f983e06fc.png";
 /* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "08680ed28a64e2b90f5b459f285e9a21.png";
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "5c82ea3746fc5bad184001be65a9ebd6.png";
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -23069,7 +23081,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(196);
+var	fixUrls = __webpack_require__(198);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -23404,7 +23416,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports) {
 
 
@@ -23497,18 +23509,6 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
-
-/***/ }),
-/* 197 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "08680ed28a64e2b90f5b459f285e9a21.png";
-
-/***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "5c82ea3746fc5bad184001be65a9ebd6.png";
 
 /***/ })
 /******/ ]);

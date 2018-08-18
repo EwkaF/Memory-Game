@@ -95,9 +95,7 @@ class Game extends React.Component{
 
             <div style={{display:'flex',flexWrap: 'wrap', width: width, justifyContent:'center', alignItems:'center', margin: '1em auto'}}>
                 {cards}
-
-                {/*pokazywanie next level*/}
-                {/*{this.score === this.props.numberOfCardsinLevel && <div>Next level</div>}*/}
+           
             </div>
         )
     }
@@ -107,9 +105,8 @@ class Game extends React.Component{
         //funkcja play audio
         let id = this.state.gameGrid[cardIndex].imageId
         this.sound = new Audio(this.props.cards[id].audio);
-        // audio.src = this.props.cards.audio
         console.log(this.state.gameGrid[cardIndex].imageId)
-        //console.log(this.props.cards[cardIndex].audio)
+
         this.sound.play()
         this.setState(prevState => ({
             checked: prevState.checked.indexOf(cardIndex) > -1 ? prevState.checked : [...prevState.checked, cardIndex]

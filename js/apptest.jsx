@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 
 module.exports = class Card extends React.Component{
 
+ // const divStyle ={};
+ //
+ //    handleMouseEnter = () => {
+ //        divStyle={
+ //            opacity:'0.5'
+ //        }
+ //    }
 
     render(){
         let divStyle ={};
@@ -42,7 +49,9 @@ module.exports = class Card extends React.Component{
             textStyle ={
             position:'relative',
             top: '120px',
-            left:'40px'
+            left:'40px',
+            fontWeight:'bold',
+            fontSize:'1.5em'
         }
         }
         if (this.props.isRemoved){
@@ -56,11 +65,9 @@ module.exports = class Card extends React.Component{
         }
 
 
-        return (<div onClick={this.props.onOpen} >
+
+        return (<div onClick={this.props.onOpen} onMouseEnter={this.handleMouseEnter} >
             <div style={divStyle}>
-            {/*<audio>*/}
-            {/*<source src = {this.props.card.audio}></source>*/}
-            {/*</audio>*/}
 
             <h3 style={textStyle}>{this.props.card.name} </h3>
             </div>
@@ -69,13 +76,3 @@ module.exports = class Card extends React.Component{
     }
 }
 
-// const images =  {name:'blueshell',
-//      src:'./img/blueshell.png'};
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     ReactDOM.render(
-//         <Card blueshell = {images}/>,
-//         document.getElementById('app')
-//     );
-// });;
