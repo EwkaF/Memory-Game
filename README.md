@@ -6,11 +6,11 @@ The game was written as final project at programming bootcamp JavaScript Develop
 It was built with the purpose of helping kids to teach English by game. Players may choose one of the theme and enjoy the game. For more efficient learning turn on the sound.
 
 ## Built with:
-* react
+* React
 * Sass
 * webpack
 
-## Screenshots
+## Screenshot
 ![Example screenshot](screenshot.png)
 
 Github Pages: https://ewkaf.github.io/Memory-Game/
