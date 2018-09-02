@@ -2,8 +2,8 @@
 This is a memory game app built with React.
 
 ## Table of Contents
-* [General info](#General-info)
-* [Technologies](#Technologies)
+* [General info](##General-info)
+* [Technologies](##Technologies)
 * [Setup](#setup)
 
 ## General info
